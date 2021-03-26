@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<context-param>
+	<param-name>contextConfigLocation</param-name>
+	<!-- 스프링 환경설정 파일인 root-context.xml을 가장 먼저 참조한다는 뜻 -->
+	<param-value>/WEB-INF/spring/root-context.xml</param-value>
+</context-param>
+
+<listener>
+	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+</listener>
+
+<servlet>
+	<servlet-name>appServlet</servlet-name>
+	<!-- 스프링에 내장된 서블릿 클래스 -->
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<!-- WEB-INF 안의 servlet-context.xml을 참조 -->
+		<!-- xml파일 안에 정의된 객체를 로딩한다. -->
+		<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+	</init-param>
+	<!-- 가장먼저 우선순위를 뜻한다 -->
+	<load-on-startup>1</load-on-startup>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>appServlet</servlet-name>
+	<url-pattern>/</url-pattern>
+	<!-- DispatcherServlet이 모든 요청을 가로챌 수 있게 등록하고 -->
+	<!-- 특정 url로 변경하여 사용가능함  -->
+</servlet-mapping>
+
+</web-app>

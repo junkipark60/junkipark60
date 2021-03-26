@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- xml작성시 namespace는 매퍼의 클래스 및 클래스의 위치와 맞게 작성하고ㅓ -->
+<mapper namespace="com.test.service.TestService">
+	<!-- id는 매퍼의 함수명과 resultType은 셀렉트 쿼리문의 결과를 특정 클래스의 객체로 만들기 위해 사용한다. -->
+	<select id="getlist" resultType="com.test.vo.TestVO">
+<![CDATA[
+		select * from test_tbl
+		order by  id asc
+]]>
+	</select>
+
+	<insert id="insert" parameterType="com.test.vo.TestVO">
+<![CDATA[
+	insert into test_tbl (name,address,content) values (#{name},#{address},#{content});
+]]>
+
+	</insert>
+
+	<delete id="delete" parameterType="com.test.vo.TestVO">
+<![CDATA[
+	DELETE FROM test_tbl
+	WHERE id=#{id};
+]]>
+	</delete>
+
+	<select id="edit" resultType="com.test.vo.TestVO">
+	<![CDATA[
+	select id,name,address,content FROM test_tbl
+	WHERE id=#{id};
+]]>
+	</select>
+
+<update id="update" parameterType="com.test.vo.TestVO">
+<![CDATA[
+	update test_tbl 
+	Set name=  #{name}, address= #{address} ,content=#{content}
+	where id=#{id};
+]]>
+	</update> 
+</mapper>
