@@ -1,6 +1,4 @@
 ### Hi there 👋
 
-![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=junkipark60%20Lee&fontSize=90&animation=twinkling)
-[![](https://raw.githubusercontent.com/junkipark60/junkipark60/master/profile-summary-card-output/default/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-[![](https://raw.githubusercontent.com/junkipark60/junkipark60/master/profile-summary-card-output/default/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/junkipark60/junkipark60/master/profile-summary-card-output/default/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-[![](https://raw.githubusercontent.com/junkipark60/junkipark60/master/profile-summary-card-output/default/3-stats.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/junkipark60/junkipark60/master/profile-summary-card-output/default/4-productive-time.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=250&section=header&text=junkipark60&fontSize=90&animation=twinkling)
+[![stats](https://github-readme-stats.vercel.app/api?username=junkipark60&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)  
